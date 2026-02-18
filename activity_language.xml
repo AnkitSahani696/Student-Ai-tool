@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple_gradient"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_pdf"
+            android:tint="#FF6B6B"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📚 PDF Summarizer"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#F8F3F3"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload PDF aur instant summary paao!"
+            android:textSize="14sp"
+            android:textColor="#F0E8E8"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Main Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/selectedFileText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Koi file select nahi ki"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Select PDF Button -->
+            <Button
+                android:id="@+id/selectPdfBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="📄 Select PDF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="12dp"/>
+
+            <!-- Process Button -->
+            <Button
+                android:id="@+id/processBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="🚀 Generate Summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF6B6B"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"
+                android:enabled="false"
+                app:cornerRadius="12dp"/>
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Processing..."
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Footer Info -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚡ Powered by AI"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
